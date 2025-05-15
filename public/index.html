@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple File/Text Sender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 0 auto; padding: 20px; }
+    form { margin-bottom: 20px; }
+    input, button { margin-top: 10px; }
+    h2 { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>Send Text or File</h1>
+  
+  <h2>Send Text</h2>
+  <form action="/send-text" method="post">
+    <textarea name="text" rows="4" cols="40" placeholder="Enter your text here"></textarea><br>
+    <button type="submit">Send Text</button>
+  </form>
+  
+  <h2>Upload File</h2>
+  <form action="/upload-file" method="post" enctype="multipart/form-data">
+    <input type="file" name="file"><br>
+    <button type="submit">Upload File</button>
+  </form>
+</body>
+</html>
